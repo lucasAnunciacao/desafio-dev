@@ -83,3 +83,14 @@ Este desafio foi baseado neste outro desafio: https://github.com/lschallenges/da
 ---
 
 Boa sorte!
+
+# Guia
+
+Para rodar projeto do front end :
+1. Instalar Node 14.15.0
+2. Configurar variável de ambiente node
+3. Abrir pasta frontend
+4. Rodar comando (instalar dependências) : npm install
+5. Rodar comando (rodar projeto) : npm start
+
+Observações : projeto está rodando na porta 4200. No arquivo proxy.conf.json está configurado o proxy para o backend.
