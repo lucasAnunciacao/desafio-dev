@@ -72,6 +72,11 @@ public class CnabModel {
             if (ValidateUtils.validateStringNumeroCartao(cnabString.substring(30, 42))) {
                 cnabModel.setCartaoTransacao(cnabString.substring(30, 42));
             }
+
+            cnabModel.getDataOcorrencia().setHours(Integer.parseInt(cnabString.substring(42, 44)));
+            cnabModel.getDataOcorrencia().setMinutes(Integer.parseInt(cnabString.substring(44, 46)));
+            cnabModel.getDataOcorrencia().setSeconds(Integer.parseInt(cnabString.substring(46, 48)));
+
             cnabModel.setNomeRepresentanteLoja(cnabString.substring(48, 62).stripTrailing());
             cnabModel.setNomeLoja(cnabString.substring(62, 80).stripTrailing());
             cnabModel.setId(UUID.randomUUID());

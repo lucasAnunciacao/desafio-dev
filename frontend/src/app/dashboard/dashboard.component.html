@@ -1,0 +1,38 @@
+<div class="main-content">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-lg-12 col-md-12">
+              <div *ngFor="let comp of cnabCompany; let i = index" class="card">
+                  <div class="card-header card-header-warning">
+                      <h4 class="card-title">Empresa : {{comp.empresaNome}} - Representante : {{comp.empresaRepresentanteNome}}</h4>
+                      <p class="card-category">Saldo : R${{comp.saldoEmpresa}}</p>
+                  </div>
+                  <div class="card-body table-responsive">
+                      <table class="table table-hover" >
+                          <thead class="text-warning">
+                            <th>Tipo Transação</th>
+                            <th>Natureza Transação</th>
+                            <th>Sinal Transação</th>
+                            <th>Data Ocorrência</th>
+                            <th>Valor Movimentação</th>
+                            <th>Cpf</th>
+                            <th>Cartão Transação</th>
+                          </thead>
+                          <tbody>
+                              <tr *ngFor="let oco of comp.transacaoEmpresaDTOList; let a = index">
+                                  <td>{{oco.descricaoTipoTransacao}}</td>
+                                  <td>{{oco.naturezaTipoTransacao}}</td>
+                                  <td>{{oco.sinalTipoTransacao}}</td>
+                                  <td>{{oco.dataOcorrencia | date : 'dd/MM/yyyy HH:mm' }}</td>
+                                  <td>R${{oco.valorMovimentacao}}</td>
+                                  <td>{{oco.cpf}}</td>
+                                  <td>{{oco.cartaoTransacao}}</td>
+                              </tr>
+                          </tbody>
+                      </table>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
